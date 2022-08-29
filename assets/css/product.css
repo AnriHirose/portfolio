@@ -1,0 +1,783 @@
+@charset "UTF-8";
+/* CSS Document */
+html {
+  scroll-behavior: smooth;
+}
+.header {
+  width: 100%;
+    position: fixed;
+    display: flex;
+    z-index: 10;
+    justify-content: flex-end;
+    top: 0;
+    left: 0px;
+}
+#nav-drawer {
+    line-height: 0.6em;
+    background-color: transparent;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    width: 97px;
+    padding: 9px;
+    box-sizing: border-box;
+    background: #5c4641;
+  }
+  #nav-open {
+    width: 88px;
+    height: 36px;
+    display: inline-block;
+    position: relative;
+  }
+#nav-open span {
+    transform: rotate(-54deg);
+     position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: #fff;
+    top: 15px;
+  }
+
+  #nav-open span:nth-child(1){
+     position: absolute;
+    background-color: #fff;
+    transform: rotate(-54deg);
+ 
+   left: 0;
+  }
+  #nav-open span:nth-child(2){
+     left: 20px;
+  }
+    #nav-open span:nth-child(3){
+     left: 40px;
+  }
+    #nav-open span:nth-child(4){
+     left: 60px;
+  }
+  #nav-open {
+    width: 88px;
+    height: 33px;
+     display: inline-block;
+  }
+  #nav-drawer p {
+    display: block;
+  }
+ #nav-close {
+    width: 100px;
+    height: 101px;
+   position: fixed;
+    top: 34px;
+    right: 20px;
+    display: block;
+
+  } 
+
+  #nav-close::before,#nav-close::after{
+   content: "";
+    display: block;
+    top: 0px;
+    left: 55px;
+    width: 50%;
+    height: 2px;
+    background: #000;
+    transform: rotate(45deg);
+    transform-origin: 50% 0%;
+    position: relative;
+    z-index: 99999;
+   
+  }
+  #nav-close::after{
+   transform: rotate(-45deg);
+    transform-origin: 44% 0%;
+  }
+  #nav-content {
+    top: 0;
+    right: -400px;
+    z-index: 9999;
+    /* padding-top: 40px; */
+    display: block;
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    font-family: "Arvo", serif;
+    text-align: left;
+    letter-spacing: 0.14em;
+    transition: 0.3s ease-in-out;
+    overflow-y: scroll;
+  }
+#nav-content.show{
+  right: 0;
+}
+.close {
+    position: absolute;
+    right: 20px;
+    top: 36px;
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+.close span:first-child {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: translateY(4px) rotate(45deg);
+  }
+  .close span:last-child {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: translateY(1px) rotate(-45deg);
+  }
+.header-content {
+    text-align: center;
+    display: block;
+    margin-bottom: 40px;
+  }
+.header_content_ul {
+text-align: left;
+    display: inline-block;    
+  }
+
+  .header_content_ul_li {
+   font-size: 1.8rem;
+    margin-bottom: 27px;
+    text-transform: uppercase;
+    color: #000;
+  }
+  .header_content_ul_li a {
+    text-decoration: none;
+  color: #000;
+  }
+ 
+  .home {
+    display: block;
+  }
+
+  .drawer_diagonal {
+        font-size: 2.2rem;
+    color: #000;
+    padding: 80px 0px 54px;
+    text-align: center;
+    letter-spacing: 5px;
+    display: block;
+}
+.drawer_content {
+    background-color: #fff;
+
+  }
+.menu_btn {
+  width: 65px;
+  display: inline-block;
+  position: relative;
+  position: absolute;
+  right: 30px;
+  top: 12px;
+}
+
+.menu_btn span {
+    position: absolute;
+    height: 2px;
+    width: 18px;
+    background-color: #3a3021;
+    transform: rotate(-54deg);
+  top: 15px;}
+
+.menu_btn span:nth-child(1) {
+    position: absolute;
+     width: 18px;
+    background-color: #3a3021;
+    transform: rotate(-54deg);
+    left: 0;
+    }
+.menu_btn span:nth-child(2) {
+    left: 20px;
+    width: 18px;
+}
+.menu_btn span:nth-child(3) {
+    left: 40px;
+     width: 18px;
+}
+.menu_btn span:nth-child(4) {
+    left: 60px;
+     width: 18px;
+}
+
+  .nav_menu {
+    font-size: 1.2rem;
+    /* color: #fff; */
+    text-transform: uppercase;
+    display: block;
+    padding-top: 32px;
+    padding-left: 18px;
+  }
+  .nav_address {
+    font-size: 1.6rem;
+    color: #000;
+    font-family: "游ゴシック", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    line-height: 1.8;
+    display: block;
+  }
+  .nav_station {
+    margin-top: 20px;
+    
+  }
+  .nav_time {
+    font-size: 1.6rem;
+    letter-spacing: 0.30em;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  
+  
+.nav-drawer {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  margin: 0 auto;
+  position: relative;
+}
+.nav-drawer::after {
+  content: "MENU";
+  display: block;
+  position: absolute;
+  top: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+}
+
+.scrolled_sns2 {
+    display: none; 
+  }
+.scrolled_sns {
+
+  display: flex;
+    border-top: solid 1px #d1d1d1;
+    border-bottom: solid 1px #d1d1d1;
+    height: 50px;
+  }
+
+  .access_tel_reserve {
+    display: block;
+  }
+.scrolled_insta1{
+  display: flex;
+    flex-grow: 1;
+align-items: center;
+    justify-content: center;
+  }
+  
+  .scrolled_line1{
+ display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    border-left: solid 1px #d1d1d1;
+}
+.nav_address_center {
+    text-align: center;
+    display: block;
+    padding: 100px 0 50px;
+  }
+  .nav_address {
+     font-size: 1.6rem;
+    color: #000;
+    font-style: normal;
+    text-align: left;
+    display: inline-block;    
+}
+  .access_tel {
+    text-align: center;
+  padding: 0 0 40px;
+  }
+  .access_tel_reserve dt {
+    font-size: 1.4rem;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 0.30em;
+    line-height: 1.8;
+  }
+  .access_tel_reserve dd a {
+    font-family: "Arvo", serif;
+    color: #a65846;
+    font-size: 2.4rem;
+    letter-spacing: 0.20em;
+    text-decoration: none;
+    line-height: 1.8;
+  }
+ .access_tel_reserve dd span {
+    text-transform: uppercase;
+  }
+  
+  
+  
+  
+
+.main {
+  background-color: #ededed;
+}
+.top_title {
+  text-align: center;
+  padding-top: 150px;
+}
+.top_title h2 {
+  font-size: 2.8rem;
+  font-family: 'Adobe Caslon Pro', sans-serif;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.top_title h2::before {
+  content: '';
+  flex-grow: 0.09;
+  height: 1px;
+  background: #3a3021;
+  margin-right: 19px;
+}
+.top_title h3 {
+  font-size: 1.2rem;
+  letter-spacing: 0.20em;
+  font-weight: 200;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+.pierce h2 {
+  font-size: 3.0rem;
+  letter-spacing: 0.20em;
+  font-weight: 100;
+  font-family: 'Arno Pro', sans-serif;
+  position: relative;
+  z-index: 1;
+  top: 120px;
+  left: 0;
+}
+.pierce_sp {
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.pierce_2 {
+  margin-top: 55px;
+}
+.pierce_3 {
+  margin-top: 10px;
+}
+.candle h2 {
+  font-size: 3.0rem;
+  letter-spacing: 0.20em;
+  font-weight: 100;
+  font-family: 'Arno Pro', sans-serif;
+  position: relative;
+  z-index: 1;
+  top: 155px;
+  left: 0;
+}
+.candle_1 {
+  margin-bottom: 85px;
+}
+.pierce_pc, .candle_pc {
+  display: none;
+}
+.sp {
+  display: block;
+}
+
+
+
+.product_btn {
+  position: relative;
+  overflow: hidden;
+  background-color: #ededed;
+  border: 1px solid #3a3021;
+  color: #3a3021;
+  font-size: 1.2rem;
+  letter-spacing: 0.30em;
+  font-family: "Arvo", serif;
+  text-transform: uppercase;
+  margin: 0px auto 100px;
+  padding: 5px 0px 5px 18px;
+  width: 24em;
+  transition: ease .3s;
+}
+/*ボタン内spanの形状*/
+.btn span {
+  position: relative;
+  z-index: 3; /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+  color: #3a3021;
+}
+.btn:hover span {
+  color: #fff;
+}
+/*== 背景が流れる（斜め） */
+.bgskew::before {
+  content: '';
+  /*絶対配置で位置を指定*/
+  position: absolute;
+  top: 0;
+  left: -130%;
+  /*色や形状*/
+  background: #3a2b21;
+  opacity: 1;
+  width: 120%;
+  height: 100%;
+  transform: skewX(0deg);
+}
+/*hoverした時のアニメーション*/
+.bgskew:hover::before {
+  animation: skewanime .5s forwards; /*アニメーションの名前と速度を定義*/
+}
+@keyframes skewanime {
+  100% {
+    left: -10%; /*画面の見えていない左から右へ移動する終了地点*/
+  }
+}
+/*========= レイアウトのためのCSS ===============*/
+a {
+  text-decoration: none;
+  color: #3a3021;
+}
+.insta {
+  text-transform: capitalize;
+  margin-left: 10px;
+}
+.arrow {
+  margin-bottom: 10px;
+  margin-left: 70px;
+}
+.btn-arrow {
+  position: relative;
+  background: #333;
+  width: 80px;
+  height: 1px;
+  display: block;
+  margin-left: auto;
+}
+.btn-arrow:after {
+  content: "";
+  width: 12px;
+  height: 1px;
+  background: #333;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotate(45deg);
+  transform-origin: right;
+}
+.product_btn a:hover .btn-arrow, .product_btn a:hover .btn-arrow:after {
+  background: #fff;
+}
+.blogicon-chevron-up {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  height: 90px;
+  background-color: #3a2b21;
+  margin-bottom: 80px;
+}
+.blogicon-chevron-up:hover {
+  background: #3a2b21;
+  color: #fff;
+  transition: 3s all linear;
+}
+.blogicon-chevron-up img {
+  width: 25px;
+}
+.copywriter {
+  font-size: 1.2rem;
+  letter-spacing: 0.15em;
+  text-align: center;
+}
+@media(min-width: 768px) {
+   #nav-drawer {
+    color: #5c4641;
+    line-height: 0.6em;
+    width: 190px;
+    padding: 25px;
+    background-color: transparent;
+  }
+  #nav-content {
+    display: block;
+    top: 0;
+    right: -1000px;
+    z-index: 9999;
+    padding-top: 100px;
+    width: 30%;
+    height: 100%;
+    background-color: #4e3f28;
+    transition: 0.5s;
+  }
+  #nav-content.show{
+    display: block;
+    right: 0;
+  } 
+  #nav-content::before,#nav-content::after {
+    background: #fff;
+    top: 50px;
+    left: 50px;
+    position: relative;
+    width: 40%;
+}
+  
+ 
+  #nav-content ul li a {
+    color: #fff;
+  }
+  
+  .menu_btn span {
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: #000;
+    transform: rotate(-54deg);
+  top: 15px;}
+  
+ .menu_btn span:nth-child(1) {
+    position: absolute;
+    width: 20px;
+    background-color: #000;
+    transform: rotate(-54deg);
+   left: 0;
+  }
+  .menu_btn span:nth-child(2) {
+    left: 20px;
+    width: 20px;
+}
+.menu_btn span:nth-child(3) {
+    left: 40px;
+      width: 20px;
+}
+.menu_btn span:nth-child(4) {
+    left: 60px;
+      width: 20px;
+}
+    #nav-open {
+    height: 50px;  
+  }
+ 
+  #nav-close::before,#nav-close::after {
+    background: #fff;
+    top: 50px;
+    left: 50px;
+    position: relative;
+    width: 40%;
+  }
+  .close {
+    position: absolute;
+    right: 45px;
+    top: 36px;
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+  .close span:first-child {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: translateY(16px) rotate(45deg);
+  }
+  .close span:last-child {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: translateY(-23px) rotate(-45deg);
+  }
+  
+  .header_content_ul_li {
+    font-size: 2.8rem;
+       margin-bottom: 40px;
+  }
+  .nav_menu {
+    font-size: 2.0rem;
+    padding-top: 32px;
+    padding-left: 8px;
+  }
+  .drawer_diagonal {
+    color: #fff;
+    font-size: 3.2rem;
+    padding-bottom: 50px;
+    padding-top: 0;
+    letter-spacing: 6px;
+  }
+  .drawer_content {
+    background-color: #4e3f28;
+  }
+  .scrolled-nav-sns {
+    display: none;
+  }
+  
+  .scrolled_sns2 {
+    display: flex;
+    border-top: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+    height: 50px;
+  }
+  .scrolled_sns2 img {
+    width: auto;
+  
+  }
+  .scrolled_insta2 {
+    display: flex;
+    flex-grow: 1;
+align-items: center;
+    justify-content: center;
+  }
+  .scrolled_line2 {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    border-left: solid 1px #fff;
+  }
+  .nav_address_center {
+    text-align: center;
+    display: block;
+    padding: 100px 0 50px;
+    background-color: #4e3f28;
+  }
+  .nav_address {
+     font-size: 1.6rem;
+    color: #fff;
+    font-style: normal;
+    text-align: left;
+    display: inline-block;    
+}
+  .access_tel {
+    text-align: center;
+  padding-bottom: 40px;
+  }
+  .access_tel_reserve dt {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 0.30em;
+    line-height: 1.8;
+  }
+  .access_tel_reserve dd a {
+    font-family: "Arvo", serif;
+    color: #fff;
+    font-size: 2.4rem;
+    letter-spacing: 0.20em;
+    text-decoration: none;
+    line-height: 1.8;
+  }
+ .product_btn {
+  position: relative;
+  overflow: hidden;
+  background-color: #ededed;
+  border: 1px solid #3a3021;
+  color: #3a3021;
+  font-size: 1.2rem;
+  letter-spacing: 0.30em;
+  font-family: "Arvo", serif;
+  text-transform: uppercase;
+  margin: 0px auto 100px;
+  padding: 5px 20px 5px 18px;
+  width: 24em;
+  transition: ease .3s;
+}
+ 
+  .top_title h2 {
+    font-size: 5.0rem;
+    padding-top: 0;
+    margin-bottom: 55px;
+    position: relative;
+    display: inline-block;
+  }
+  .top_title h2::before {
+    content: '';
+    flex-grow: 0.06;
+    height: 1px;
+    background: #3a3021;
+    margin-right: 25px;
+    position: absolute;
+    width: 60px;
+    top: 50%;
+    right: 100%;
+  }
+  .top_title h3 {
+    font-size: 2.2rem;
+    letter-spacing: 0.30em;
+  }
+  .pierce h2 {
+    font-size: 6.0rem;
+    top: 260px;
+    left: 75px;
+  }
+  .flex {
+    display: flex;
+    justify-content: center;
+  }
+  .pierce_pc2 {
+    margin-left: 55px;
+  }
+  .pierce_pc3 {
+    margin-top: 70px;
+  }
+  .pierce_pc4 {
+    margin-top: 40px;
+  }
+  .sp {
+    display: none;
+  }
+  .product_btn {
+    font-size: 2.0rem;
+    margin: 0px auto 100px;
+    padding: 0;
+    width: 25em;
+  }
+  .product_btn a {
+    padding: 8px 20px 8px 40px;
+    width: auto;
+    display: flex;
+    align-items: baseline;
+  }
+  .pierce_sp, .candle_sp {
+    display: none;
+  }
+  .pierce_pc, .candle_pc {
+    display: block;
+    text-align: center;
+  }
+  .candle h2 {
+    font-size: 6.0rem;
+    top: 256px;
+    left: 113px;
+  }
+  .candle_pc {
+    text-align: right;
+    margin-bottom: 85px;
+  }
+  .blogicon-chevron-up {
+    height: 150px;
+    margin-bottom: 80px;
+  }
+  .blogicon-chevron-up img {
+    width: 30px;
+  }
+  .copywriter {
+    font-size: 2.0rem;
+  }
+}
