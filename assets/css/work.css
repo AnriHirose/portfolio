@@ -181,8 +181,6 @@ html {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  margin-bottom: 60px;
-  /* margin: 0 auto; */
   margin-top: 50px;
 }
 
@@ -226,6 +224,7 @@ html {
 .lpsite_img {
   display: flex;
   max-width: 350px;
+  gap: 50px;
 }
 
 
