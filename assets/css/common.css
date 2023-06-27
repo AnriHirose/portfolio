@@ -1,13 +1,16 @@
 @charset "UTF-8";
+
 /* CSS Document */
 html {
-  font-size: 62.5%; /* 16px * 62.5% = 10px */
+  font-size: 62.5%;
+  /* 16px * 62.5% = 10px */
   width: 100%;
   box-sizing: border-box;
 }
+
 body {
   color: #ffffff;
-    font-family: "游ゴシック", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif; 
+  font-family: "游ゴシック", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.8;
@@ -16,33 +19,26 @@ body {
 a:hover {
   opacity: 0.5;
 }
+
 .none {
   display: none;
 }
-.wrapper{
+
+.wrapper {
   overflow: hidden;
 }
-.inner{
-  max-width: 1040px;
-  padding-left: 10%;
-  padding-right: 10%;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media(min-width: 768px) {
-  .inner{
-    max-width: 1440px;
-  padding-left: 10%;
-  padding-right: 10%;
-  margin-left: auto;
-  margin-right: auto;
 
-  }}
-*,::before,::after {
+
+@media(min-width: 768px) {}
+
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
+
 img {
-  max-width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
   vertical-align: bottom;
 }
