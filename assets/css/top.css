@@ -220,7 +220,7 @@ html {
   display: block;
   list-style: none;
   justify-content: center;
-  /* margin-top: 100px; */
+  margin: 100px 50px;
 }
 
 .list_item {
@@ -385,7 +385,7 @@ html {
 .box {
   display: flex;
   align-items: center;
-  margin-right: 20px;
+  /* margin-right: 20px; */
   flex-flow: column;
 }
 
@@ -727,8 +727,8 @@ html {
     margin-top: 100px;
   }
 
-  .box {
-    margin-right: 70px;
+  .skill-design>.box:last-child {
+    margin-left: 70px;
   }
 
   .img-photoshop {
