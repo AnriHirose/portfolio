@@ -1,373 +1,135 @@
-@charset "UTF-8";
-
-/* CSS Document */
-html {
-  scroll-behavior: smooth;
-}
-
-.header-bgc {
-  background-color: #a3b5c0;
-}
-
-.header {
-  height: 80px;
-  position: relative;
-}
-
-.header h1 {
-  position: absolute;
-  left: 10%;
-  top: 22px;
-}
-
-.header h1 a {
-  font-family: "sofia-pro", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-  font-size: 2rem;
-  letter-spacing: 0.2em;
-  color: #ffff;
-  text-decoration: none;
-}
-
-@media (max-width: 750px) {
-
-  /* ハンバーガーアイコン　*/
-  #nav-drawer {
-    padding: 26px 24px 0 0;
-    text-align: right;
-    position: relative;
-  }
-
-  #nav-open {
-    display: inline-block;
-    vertical-align: middle;
-    width: 25px;
-    height: 22px;
-  }
-
-  #nav-open span,
-  #nav-open span:before,
-  #nav-open span:after {
-    position: absolute;
-    height: 2px;
-    width: 25px;
-    background-color: #FFF;
-    display: block;
-    content: "";
-  }
-
-  #nav-open span:before {
-    bottom: -8px;
-  }
-
-  #nav-open span:after {
-    bottom: -16px;
-  }
-
-  #nav-close {
-    z-index: 999;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    opacity: 0.5;
-  }
-
-  #nav-content {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    width: 70%;
-    height: 100%;
-    background-color: #ffffff;
-    text-align: left;
-    padding: 35px 0 0 24px;
-    transform: translateX(-105%);
-    transition: 0.3s ease-in-out;
-    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.15);
-  }
-
-  .nav-drawer__title {
-    font-family: "sofia-pro", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-    display: block;
-    font-size: 2.2rem;
-    letter-spacing: 0.2em;
-    /* font-weight: 400; */
-    color: #a3b5c0;
-    margin-bottom: 46px;
-  }
-
-  .nav-drawer__link-top {
-    display: block;
-  }
-
-  #nav-content ul li {
-    margin-bottom: 36px;
-  }
-
-  #nav-content ul li a {
-    font-family: "sofia-pro", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-    text-decoration: none;
-    font-size: 1.6rem;
-    letter-spacing: 0.2em;
-    /* font-weight: 500; */
-    color: #a3b5c0;
-  }
-
-  #nav-input:checked~#nav-close {
-    display: block;
-  }
-
-  #nav-input:checked~#nav-content {
-    transform: translateX(0%);
-  }
-
-  .nav-drawer__title a {
-    color: #a3b5c0;
-    text-decoration: none;
-  }
-}
-
-.main {
-  background-color: #a3b5c0;
-  border-top: 3px solid #ffff;
-}
-
-.works {
-  max-width: 520px;
-  margin: auto;
-}
-
-.works {
-  display: flex;
-  justify-content: center;
-  margin: 130px auto;
-  flex-flow: column;
-}
-
-.title {
-  font-family: "sofia-pro", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-  font-size: 5.8vw;
-  letter-spacing: 0.23em;
-  font-weight: 400;
-  position: relative;
-  margin-left: 40px;
-}
-
-.title ::after {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  width: 50%;
-  margin-left: 20px;
-  height: 2px;
-  background: rgb(255, 255, 255);
-}
-
-
-.list {
-  margin: 150px auto;
-  text-align: center;
-}
-
-.title_item {
-  margin-bottom: 65px;
-  font-size: 3.4vw;
-  font-weight: 100;
-  letter-spacing: 0.18em;
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  margin-top: 50px;
-}
-
-.title_item::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  background-color: rgb(255, 255, 255);
-  z-index: 1;
-}
-
-.img {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.cardblue_img {
-  max-width: 300px;
-}
-
-.cardgreen_img {
-  max-width: 500px;
-}
-
-.banner_img {
-  max-width: 400px;
-}
-
-.profilesite_img {
-  max-width: 686px;
-}
-
-.website_img {
-  max-width: 686px;
-}
-
-.lpsite_img {
-  display: flex;
-  max-width: 350px;
-}
-
-
-.text {
-  font-size: 3vw;
-  max-width: 70%;
-  letter-spacing: .15rem;
-  margin: 0 auto;
-}
-
-.profiles_img,
-.website_img {
-  text-align: center;
-}
-
-.header__navigation {
-  display: none;
-}
-
-#page-top {
-  position: fixed;
-  right: 0px;
-  bottom: 60px;
-  height: 60px;
-  font-style: normal;
-  transform: rotate(90deg);
-  line-height: 1.5rem;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  padding: 4px 13px 0px 55px;
-  border-top: 1px solid;
-}
-
-#page-top::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 17px;
-  transform: rotate(35deg);
-  transform-origin: left top;
-  border-top: 1px solid;
-}
-
-.blogicon-chevron-up {
-  font-size: 3vw;
-}
-
-.copywriter {
-  font-family: "sofia-pro", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-  text-align: center;
-  font-size: 3vw;
-}
-
-@media(min-width: 750px) {
-  .header {
-    height: 100px;
-    position: relative;
-    margin: 0 auto;
-    padding-top: 33px;
-    padding-right: 10%;
-    box-sizing: border-box;
-  }
-
-  .header h1 {
-    position: absolute;
-    left: 10%;
-    top: 22px;
-  }
-
-  .header h1 a {
-    font-size: 3rem;
-    letter-spacing: 0.2em;
-    color: #ffff;
-    text-decoration: none;
-    font-weight: 200;
-  }
-
-  .header__navigation {
-    display: block;
-    text-align: right;
-  }
-
-  .header__navigation ul li {
-    font-family: "sofia-pro", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-    display: inline-block;
-    margin-left: 25px;
-  }
-
-  .header__navigation ul li a {
-    text-decoration: none;
-    font-size: 2rem;
-    letter-spacing: 0.15em;
-    color: #FFF;
-  }
-
-  .title {
-    font-size: 3.5vw;
-    letter-spacing: 0.23em;
-  }
-
-  .title ::after {
-    width: 60%;
-    margin-left: 30px;
-  }
-
-  .works {
-    max-width: 920px;
-    margin: 100px auto;
-    /* text-align: center; */
-  }
-
-
-  .title_item {
-    font-size: 1.4vw;
-  }
-
-
-  .img {
-    margin-bottom: 65px;
-  }
-
-
-
-  .text {
-    font-size: 1vw;
-  }
-
-  #page-top {
-    bottom: 100px;
-    height: 26px;
-    padding: 10px 15px 0px 54px;
-  }
-
-  #page-top::before {
-    width: 17px;
-  }
-
-  .blogicon-chevron-up {
-    font-size: 1.4vw;
-  }
-
-  .copywriter {
-    font-size: 1.6rem;
-  }
-}
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width = device-width, initial-scale=1, user-scalable=yes">
+  <title>ANRI HIROSE</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/work.css">
+  <meta name="description" content="portfolio">
+  <meta property="og:title" content="ANRI HIROSE">
+  <meta property="og:description" content="portfolio">
+  <meta property="og:site_name" content="ANRI HIROSE">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="../assets/ogp.jpg">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:type" content="article">
+  <meta property="fb:app_id" content="">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="assets/images/top.jpg">
+  <link rel="apple-touch-icon" href="assets/images/top.jpg" sizes="180x180">
+</head>
+
+<body>
+  <div class="header-bgc">
+
+    <header class="header">
+      <h1><a href="index.html">ANRI</a></h1>
+      <div id="nav-drawer">
+        <input id="nav-input" class="none" type="checkbox">
+        <label id="nav-open" for="nav-input"><span></span></label>
+        <label id="nav-close" class="none" for="nav-input"></label>
+        <nav id="nav-content" class="header__navigation">
+          <div class="nav-drawer__title none"><a href="index.html">ANRI</a></div>
+          <ul>
+            <li><a href="about.html">about</a></li>
+            <li><a href="work.html">works</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <main class="main">
+    <section class="works">
+      <div class="title inner">
+        <h2>works</h2>
+      </div>
+      <section class="card list">
+        <div class="cardblue_img img">
+          <img src="assets/images/namecard_outline.jpg" alt="名刺">
+        </div>
+        <div class="title_item">
+          <h2>名刺</h2>
+        </div>
+        <div class="text">
+          <p>自分を表すロゴを作成するらめにイニシャル「A」と誕生日月の6月をイメージした「紫陽花」を組み合わせました。シンプルな名刺ですので、会社名を少し名刺からはみ出すようにデザインにしました。</p>
+        </div>
+      </section>
+      <section class="card list">
+        <div class="cardgreen_img img">
+          <img src="assets/images/namecard_green.png" alt="名刺">
+        </div>
+        <div class="title_item">
+          <h2>名刺</h2>
+        </div>
+        <div class="text">
+          <p>シンプルな名刺デザインに仕上げました。高級感があるが親しみやすいデザインにする為色味は暗すぎない色を使用し、高級感を出す為にはウエイトの細い明朝体のフォントを使用しました。</p>
+        </div>
+      </section>
+      <section class="banner list">
+        <div class="banner_img img">
+          <img src="assets/images/cafebanner_work.jpg" alt="バナー">
+        </div>
+        <div class="title_item">
+          <h2>バナー</h2>
+        </div>
+        <div class="text">
+          <p>カフェのバナーを作成しました。目に止まるよう中央にコーヒーの写真を配置し、背景にはラテのムースを再現しました。女性だけではなく男性もターゲットにしたかったのでウエイトの細いフォントを使用しました。</p>
+        </div>
+      </section>
+      <section class="profilesite list">
+        <div class="profiles_img img">
+          <a target="_blank" class="btnbgskew" href="cafe_hirose_anri_19980624/index.html"><img
+              src="assets/images/profilesite_work.jpg" alt="プロフィールサイト"></a>
+        </div>
+        <div class="title_item">
+          <h2>プロフィールサイト</h2>
+        </div>
+        <div class="text">
+          <p>プロフィールサイトを作成しました。メインカラーは好きな色でもあるオレンジ色を使用し、デザインは海外のWEBサイトを意識して作成しました。</p>
+        </div>
+      </section>
+      <section class="website list">
+        <div class="website_img img">
+          <a target="_blank" class="btn bgskew" href="o2110n06_廣瀬安理_２/index.html"><img
+              src="assets/images/jorhairsalon_work.jpg" alt="webサイト"></a>
+        </div>
+        <div class="title_item">
+          <h2>WEBサイト</h2>
+        </div>
+        <div class="text">
+          <p>
+            ヘアーサロンのサイトを作成しました。都会に負けないオシャレな美容院にしたいというご希望をいただいたので、フォントや写真の配置にこだわりました。<br>料金表やヘアースタイルを細かく掲載し、お客様が美容院に来るまでの不安を少しでも払拭できるようにしました。
+          </p>
+        </div>
+      </section>
+      <section class="lpsite list">
+        <div class="lpsite_img img">
+          <div>
+            <img src="assets/images/lp.png" alt="lpサイト">
+          </div>
+          <div>
+            <img src="assets/images/lp2.png" alt="lpサイト">
+          </div>
+        </div>
+        <div class="title_item">
+          <h2>LPサイト</h2>
+        </div>
+        <div class="text">
+          <p>
+            オーガニック食材のLPサイトデザインを作成しました。<br>ターゲットが40代主婦で柔らかい印象を再現するために円や曲線のデザイン組み込み、色味も彩度を落とした色を使用しました。
+          </p>
+        </div>
+      </section>
+    </section>
+    <a href="#" id="page-top"><i class="blogicon-chevron-up">TOP</i></a>
+    <div class="copywriter"><small>©️2022 anri hirose</small></div>
+  </main>
+</body>
+
+</html>
