@@ -385,7 +385,6 @@ html {
 .box {
   display: flex;
   align-items: center;
-  /* margin-right: 20px; */
   flex-flow: column;
 }
 
