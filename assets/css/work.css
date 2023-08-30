@@ -28,6 +28,11 @@ html {
   text-decoration: none;
 }
 
+.namecardbule_img {
+list-style: none;
+}
+
+
 @media (max-width: 750px) {
 
   /* ハンバーガーアイコン　*/
@@ -199,6 +204,7 @@ html {
 .img {
   width: 100%;
   margin: 0 auto;
+  max-width: 650px;
 }
 
 .cardblue_img {
@@ -209,6 +215,16 @@ html {
   max-width: 500px;
 }
 
+.namecardbule_img {
+  max-width: 500px;
+}
+.design_flex:nth-child(2) {
+  margin-top: 50px;
+}
+.design_flex:first-child > .namecardbule_img:nth-child(2),.design_flex> .other_img:nth-child(n+2) {
+  margin-top: 50px;
+}
+
 .banner_img {
   max-width: 400px;
 }
@@ -217,13 +233,11 @@ html {
   max-width: 686px;
 }
 
-.website_img {
-  max-width: 686px;
-}
+
 
 .lpsite_img {
   display: flex;
-  max-width: 350px;
+  max-width: 500px;
   gap: 50px;
 }
 
@@ -333,22 +347,32 @@ html {
   }
 
   .works {
-    max-width: 920px;
+    max-width: 800px;
     margin: 100px auto;
-    /* text-align: center; */
+    text-align: center;
   }
-
 
   .title_item {
     font-size: 1.4vw;
   }
 
+  .design_flex {
+    display: flex;
+    gap: 30px;
+  }
+
+.namecardbule_img,.other_img  {
+  flex-shrink: 1;
+  width: 50%;
+}
+
+.design_flex:first-child > .namecardbule_img:nth-child(2),.design_flex> .other_img:nth-child(n+2) {
+  margin-top: 0px;
+}
 
   .img {
     margin-bottom: 65px;
   }
-
-
 
   .text {
     font-size: 1vw;
